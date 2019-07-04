@@ -5,6 +5,10 @@
     grid-template-rows: 1fr;
 }
 
+.green {
+    grid-column: span 2;
+}
+
 .zone {
     cursor:pointer;
     /* display:block; */
