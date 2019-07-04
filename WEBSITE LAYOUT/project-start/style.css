@@ -43,6 +43,32 @@ body {
     align-items: center;
 }
 
+/* GRID */
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    /* margin-top: 1em; */
+}
+
+.box img {
+    width: 80%;
+}
+
+.box {
+    background-color: #444;
+    padding: 150px;
+    margin: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
 
 
 /* UTILITY */
