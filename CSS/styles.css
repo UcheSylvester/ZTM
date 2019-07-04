@@ -1,0 +1,45 @@
+*{
+    color: red;
+}
+/* body {
+    background-image: url(scrum.jpg);
+    background-size: cover;
+} */
+
+h1 {
+    color: red;
+    background-color: black;
+    text-align: center;
+}
+
+ul {
+    text-align: right;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+a {
+    cursor: pointer;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+
+}
+
+.boxmodel {
+    border: 5px solid black;
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    margin: 5px 20px;
+}
