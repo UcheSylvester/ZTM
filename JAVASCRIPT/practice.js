@@ -4,4 +4,7 @@ let firstNumber = prompt('enter first Number');
 let secondNumber = prompt('enter second Number');
 
 const sum = Number(firstNumber) + Number(secondNumber);
-alert('The sum is :' + sum)
+alert('The sum is :' + sum);
+
+// Making a keyless car
+const ge = 18;
