@@ -2,6 +2,14 @@ const database = [
     {
         username: 'Uchenna',
         password: 'secret'
+    },
+    {
+        username: 'John',
+        password: 'supersecret'
+    },
+    {
+        username: 'Amara',
+        password: 'topsecret'
     }
 ]
 
@@ -16,16 +24,27 @@ const newFeeds = [
     }
 ]
 
-const userName = prompt('what is your username?');
-const password = prompt('what is your password?');
+const usernamePrompt = prompt('what is your username?');
+const passwordPrompt = prompt('what is your password?');
+
+function isUserValid(username, password) {
+    for(let i = 0; i < database.length; i++) {
+        if(username === database[i].username &&
+            password === database[i].password) {
+            return true;
+        }
+    }
+
+    return false;
+
+}
 
 function signIn(username, password) {
-    if((username === database[0].username) && 
-        (password === database[0].password)) {
-        console.log(newFeeds);
+    if(isUserValid(username, password)) {
+        console.log(newFeeds)
     } else {
-        console.log("wrong username and password")
+        alert("wrong username and password!")
     }
 }
 
-signIn(userName, password)
+signIn(usernamePrompt, passwordPrompt)
