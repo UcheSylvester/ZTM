@@ -1,3 +1,9 @@
+// import { without } from 'lodash';
+
+var _ = require('lodash')
+
+console.log(_)
+
 const cssValue = document.querySelector('h3');
 const color1 = document.querySelector('input[name="color1"]');
 const color2 = document.querySelector('input[name="color2"]');
