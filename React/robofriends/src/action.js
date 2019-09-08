@@ -1,10 +1,19 @@
-import { CHANGE_SEARCH_FIELD } from './constant'
+import {
+    CHANGE_SEARCH_FIELD,
+    REQUEST_ROBOT_PENDING,
+    REQUEST_ROBOT_SUCCESS,
+    REQUEST_ROBOT_FAILED
+} from './constant'
 
-export const setSearchField = (text) => {
-    console.log(text)
+export const setSearchField = (text) => ({
+    type: CHANGE_SEARCH_FIELD,
+    payload: text
+})
 
-    return {
-        type: CHANGE_SEARCH_FIELD,
-        payload: text
-    }
+export const requestRobots = (dispatch) => {
+    dispatch({ type: REQUEST_ROBOT_PENDING });
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then(response => response.json())
+        .then(data => dispatch({ type: REQUEST_ROBOT_SUCCESS, payload: data }))
+        .catch(error => dispatch({ type: REQUEST_ROBOT_FAILED, payload: error }))
 }
