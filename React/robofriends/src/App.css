@@ -10,3 +10,10 @@ h1 {
   font-weight: 200;
   color: #9ff1ef;
 }
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9ff1ef;
+}
