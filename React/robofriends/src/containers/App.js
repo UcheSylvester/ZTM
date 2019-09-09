@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    const { searchField, onSearchChange, robots, isPending, error } = this.props;
+    const { searchField, onSearchChange, robots, isPending } = this.props;
 
     // filtering robots
     const filteredRobots = robots.filter(robot => {
