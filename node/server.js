@@ -1,15 +1,13 @@
-const http = require('http')
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const server = http.createServer((request, response) => {
-  console.log('Thanks for the request');
+const app = express();
 
-  const user = {
-    name: 'Uche',
-    hobby: 'coding'
-  }
+app.use(bodyParser.json())
 
-  response.setHeader('Content-Type', 'application/json')
-  response.end(JSON.stringify(user))
+app.get('/', (req, res) => {
+  console.log(req.query)
+  res.send('hello from home')
 })
 
-server.listen(3000)
+app.listen(3000)
